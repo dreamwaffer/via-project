@@ -6,7 +6,7 @@
 
 ## Description
 
-A very simple SPA application for showing places menus of selected restaurants built on REST API. The idea is to create a simple but beautiful web application where people could find or add daily menus of the restaurants near them.
+A very simple SPA application for showing places for diving. These places are usually known just to local people, my idea is to create a collection point, where everyone can find the places near them and also add new ones.
 
 ## Used APIs
 
