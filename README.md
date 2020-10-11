@@ -11,7 +11,7 @@ A very simple SPA application for showing places menus of selected restaurants b
 ## Used APIs
 
 - [Weather API](https://openweathermap.org/api) to get information about weather at locations of JumPoint
-- [Mapy.cz API]https://api.mapy.cz/) to show the JumPoints on the map
+- [Mapy.cz API](https://api.mapy.cz/) to show the JumPoints on the map
 - Custom API with [MongoDB](https://www.mongodb.com/) to add a new JumPoint
 
 ## Used Technologies
