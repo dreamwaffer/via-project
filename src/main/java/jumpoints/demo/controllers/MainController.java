@@ -7,9 +7,7 @@ import jumpoints.demo.services.LocationService;
 import jumpoints.demo.services.WeatherService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.function.ServerRequest;
 
 import java.util.List;
 
@@ -28,6 +26,7 @@ public class MainController {
         this.fillDB();
     }
 
+    @CrossOrigin(origins = "https://dreamwaffer.github.io/via-project/")
     @GetMapping("/jumpoints")
     public List<Jumpoint> getJumpoints() {
         return this.jumpointService.getAll();
