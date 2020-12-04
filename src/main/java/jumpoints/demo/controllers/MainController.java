@@ -26,7 +26,7 @@ public class MainController {
         this.fillDB();
     }
 
-    @CrossOrigin(origins = "https://dreamwaffer.github.io/via-project/")
+    @CrossOrigin()
     @GetMapping("/jumpoints")
     public List<Jumpoint> getJumpoints() {
         return this.jumpointService.getAll();
