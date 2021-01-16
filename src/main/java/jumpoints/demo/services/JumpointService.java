@@ -1,6 +1,7 @@
 package jumpoints.demo.services;
 
 import jumpoints.demo.models.Jumpoint;
+import jumpoints.demo.models.responses.JumpointDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,6 +9,10 @@ import java.util.List;
 @Service
 public interface JumpointService {
     List<Jumpoint> getAll();
+
+    List<JumpointDTO> convertAll(List<Jumpoint> jumpoints);
+
+    JumpointDTO convertOne(Jumpoint point);
 
     boolean updateAll(List<Jumpoint> jumpoints);
 

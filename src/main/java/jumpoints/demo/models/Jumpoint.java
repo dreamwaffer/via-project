@@ -11,33 +11,62 @@ public class Jumpoint {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
     private String locationGPS;
+
+//    private float latitude;
+
+//    private float longitude;
 
     private String description;
 
     private String weather;
 
-    private Instant date;
+    private Instant createdAt;
 
-    public Jumpoint(String locationGPS, String description, String weather) {
+    private Instant updateDate;
+
+    public Jumpoint(String name, String locationGPS, String description, String weather) {
+        this.name = name;
         this.locationGPS = locationGPS;
         this.description = description;
         this.weather = weather;
-        this.date = Instant.now();
+        this.createdAt = Instant.now();
+        this.updateDate = null;
     }
 
-    public Jumpoint(String locationGPS, String description) {
+    public Jumpoint(String name, String locationGPS, String description) {
+        this.name = name;
         this.locationGPS = locationGPS;
         this.description = description;;
-        this.date = Instant.now();
+        this.createdAt = Instant.now();
+        this.updateDate = null;
     }
 
     public Jumpoint() {
-        this.date = Instant.now();
+        this.createdAt = Instant.now();
+        this.updateDate = null;
+    }
+
+    public Instant getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Instant updateDate) {
+        this.updateDate = updateDate;
     }
 
     public Long getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setId(Long id) {
@@ -68,12 +97,12 @@ public class Jumpoint {
         this.weather = weather;
     }
 
-    public Instant getDate() {
-        return date;
+    public Instant getCreatedAt() {
+        return createdAt;
     }
 
-    public void setDate(Instant date) {
-        this.date = date;
+    public void setCreatedAt(Instant date) {
+        this.createdAt = date;
     }
 }
 

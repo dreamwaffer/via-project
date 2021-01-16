@@ -21,12 +21,19 @@ public class WeatherServiceimpl implements WeatherService {
 
     public WeatherResponse restCall(float latitude, float longitude) {
         String url = "/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=" + "61f0e87cc61cc61ac75f6aeab999e8e4";
-        WeatherResponse responseJson = webClient.get()
-                .uri(url)
-                .accept(MediaType.APPLICATION_JSON)
-                .retrieve()
-                .bodyToMono(WeatherResponse.class)
-                .block();
+
+        WeatherResponse responseJson = null;
+        try {
+
+            responseJson = webClient.get()
+                    .uri(url)
+                    .accept(MediaType.APPLICATION_JSON)
+                    .retrieve()
+                    .bodyToMono(WeatherResponse.class)
+                    .block();
+        } catch (Exception e) {
+            System.err.println("Too many requests on weather api");
+        }
 
         return responseJson;
     }

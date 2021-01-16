@@ -1,6 +1,7 @@
 package jumpoints.demo.controllers;
 
 import jumpoints.demo.models.Jumpoint;
+import jumpoints.demo.models.responses.JumpointDTO;
 import jumpoints.demo.models.responses.WeatherResponse;
 import jumpoints.demo.services.JumpointService;
 import jumpoints.demo.services.LocationService;
@@ -28,8 +29,8 @@ public class MainController {
 
     @CrossOrigin()
     @GetMapping("/jumpoints")
-    public List<Jumpoint> getJumpoints() {
-        return this.jumpointService.getAll();
+    public List<JumpointDTO> getJumpoints() {
+        return this.jumpointService.convertAll(this.jumpointService.getAll());
     }
 
     @PostMapping("/jumpoints")
@@ -52,9 +53,9 @@ public class MainController {
     }
 
     private void fillDB() {
-        this.jumpointService.add(new Jumpoint("41°24’12.2″N 2°10’26.5″E", "this is first location", "sunny"));
-        this.jumpointService.add(new Jumpoint("41°24’12.2″N 2°10’26.5″E", "this is second location", "sunny"));
-        this.jumpointService.add(new Jumpoint("41°24’12.2″N 2°10’26.5″E", "this is third location", "sunny"));
+        this.jumpointService.add(new Jumpoint("Hell","50.099441, 14.249268", "this is first location", "sunny"));
+        this.jumpointService.add(new Jumpoint("Hello","50.099841, 14.241268", "this is second location", "sunny"));
+        this.jumpointService.add(new Jumpoint("Hellp","50.099741, 14.245268", "this is third location", "sunny"));
     }
 
 }
