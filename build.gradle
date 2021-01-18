@@ -19,6 +19,9 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql'
     compile 'org.springframework.boot:spring-boot-starter-webflux'
     compile 'org.projectreactor:reactor-spring:1.0.1.RELEASE'
+    compile group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '3.0.0'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.apache.httpcomponents:httpclient'
 }

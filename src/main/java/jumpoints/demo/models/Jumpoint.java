@@ -13,11 +13,9 @@ public class Jumpoint {
 
     private String name;
 
-    private String locationGPS;
+    private double latitude;
 
-//    private float latitude;
-
-//    private float longitude;
+    private double longitude;
 
     private String description;
 
@@ -27,19 +25,21 @@ public class Jumpoint {
 
     private Instant updateDate;
 
-    public Jumpoint(String name, String locationGPS, String description, String weather) {
+    public Jumpoint(String name, double latitude, double longitude, String description, String weather) {
         this.name = name;
-        this.locationGPS = locationGPS;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.description = description;
         this.weather = weather;
         this.createdAt = Instant.now();
         this.updateDate = null;
     }
 
-    public Jumpoint(String name, String locationGPS, String description) {
+    public Jumpoint(String name, double latitude, double longitude, String description) {
         this.name = name;
-        this.locationGPS = locationGPS;
-        this.description = description;;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.description = description;
         this.createdAt = Instant.now();
         this.updateDate = null;
     }
@@ -73,12 +73,20 @@ public class Jumpoint {
         this.id = id;
     }
 
-    public String getLocationGPS() {
-        return locationGPS;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setLocationGPS(String locationGPS) {
-        this.locationGPS = locationGPS;
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 
     public String getDescription() {

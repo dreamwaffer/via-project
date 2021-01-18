@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface WeatherService {
 
-    public WeatherResponse getWeather(float latitude, float longitude);
+    public WeatherResponse getWeather(double latitude, double longitude);
 }

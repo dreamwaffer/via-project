@@ -15,11 +15,11 @@ public class WeatherServiceimpl implements WeatherService {
     }
 
     @Override
-    public WeatherResponse getWeather(float latitude, float longitude) {
+    public WeatherResponse getWeather(double latitude, double longitude) {
         return restCall(latitude, longitude);
     }
 
-    public WeatherResponse restCall(float latitude, float longitude) {
+    public WeatherResponse restCall(double latitude, double longitude) {
         String url = "/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=" + "61f0e87cc61cc61ac75f6aeab999e8e4";
 
         WeatherResponse responseJson = null;

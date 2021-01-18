@@ -47,7 +47,8 @@ public class JumpointServiceImpl implements JumpointService {
         JumpointDTO pointDTO = new JumpointDTO();
         pointDTO.setName(point.getName());
         pointDTO.setId(point.getId());
-        pointDTO.setLocationGPS(point.getLocationGPS());
+        pointDTO.setLatitude(point.getLatitude());
+        pointDTO.setLongitude(point.getLongitude());
         pointDTO.setDescription(point.getDescription());
         pointDTO.setWeather(point.getWeather());
         pointDTO.setCreatedAt(this.dateTimeFormatter.getDate(point.getCreatedAt()));
@@ -64,10 +65,7 @@ public class JumpointServiceImpl implements JumpointService {
         for (Jumpoint point : jumpoints) {
             if (point.getUpdateDate() == null || Duration.between(point.getUpdateDate(), Instant.now()).toMinutes() > 120) {
                 weather = "";
-                lat = this.locationService.getLatitude(point.getLocationGPS());
-                lon = this.locationService.getLongitude(point.getLocationGPS());
-                wr = this.weatherService.getWeather(lat, lon);
-//                wr = this.weatherService.getWeather(lat, lon);
+                wr = this.weatherService.getWeather(point.getLatitude(), point.getLongitude());
                 weather += wr.getMain().getTemp() + " (feels like: " + wr.getMain().getFeels_like() + "), ";
                 weather += wr.getWeather().get(0).getMain() + ", ";
                 weather += wr.getWeather().get(0).getDescription();
@@ -82,7 +80,7 @@ public class JumpointServiceImpl implements JumpointService {
     @Override
     public boolean add(Jumpoint jumpoint) {
         try {
-            jumpointRepository.save(jumpoint);
+            this.jumpointRepository.save(jumpoint);
         } catch (IllegalArgumentException e) {
             return false;
         }
@@ -97,5 +95,15 @@ public class JumpointServiceImpl implements JumpointService {
     @Override
     public void update(Jumpoint jumpoint) {
         this.jumpointRepository.save(jumpoint);
+    }
+
+    @Override
+    public boolean delete(Jumpoint jumpoint) {
+        try {
+            this.jumpointRepository.delete(jumpoint);
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
+        return true;
     }
 }

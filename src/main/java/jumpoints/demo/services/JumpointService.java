@@ -22,4 +22,6 @@ public interface JumpointService {
 
     void update(Jumpoint jumpoint);
 
+    boolean delete(Jumpoint jumpoint);
+
 }
