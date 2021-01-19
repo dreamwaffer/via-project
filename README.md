@@ -11,11 +11,11 @@ A very simple SPA application for showing places for diving. These places are us
 ## Used APIs
 
 - [Weather API](https://openweathermap.org/api) to get information about weather at locations of JumPoint
-- [Mapy.cz API](https://api.mapy.cz/) to show the JumPoints on the map
-- Custom API with [MongoDB](https://www.mongodb.com/) to add a new JumPoint
+- [Leaflet API](https://leafletjs.com/) to show the JumPoints on the map. I used [reactJS library](https://react-leaflet.js.org/)
+- Custom API with [PostgreSQL](https://www.postgresql.org/) to add a new JumPoint
 
 ## Used Technologies
 
-- React.js - frontend
-- Python - backend
-- MongoDB - database
+- ReactJS - frontend
+- Java Spring - backend
+- PostgreSQL - database
