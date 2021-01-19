@@ -23,7 +23,7 @@ A very simple SPA application for showing places for diving. These places are us
 ## Links
 
 [Development Tracking](https://github.com/dreamwaffer/via-project/wiki/Development-Tracking)  
-[Running App](dreamwaffer.github.io/via-project/)  
+[Running App](https://dreamwaffer.github.io/via-project/)  
 [Backend Documentation](https://jumpoints.herokuapp.com/swagger-ui/index.html)  
 
 ## Description
