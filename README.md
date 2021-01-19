@@ -19,3 +19,19 @@ A very simple SPA application for showing places for diving. These places are us
 - ReactJS - frontend
 - Java Spring - backend
 - PostgreSQL - database
+
+## Links
+
+[Development Tracking](https://github.com/dreamwaffer/via-project/wiki/Development-Tracking)  
+[Running App](dreamwaffer.github.io/via-project/)  
+[Backend Documentation](https://jumpoints.herokuapp.com/swagger-ui/index.html)  
+
+## Description
+
+The Jumpoints app allows users to share their favorite places for diving. These places (JumPoints) are usually only known locally, and this application could make it easier to find these places. The application contains only basic CRUD operations, ie:
+- add a new place
+- display all places
+- update place
+- Delete a place
+
+The application is represented by a map on which all added JumPoints are drawn. Forms (add, edit) are rendered using [Bootstrap](https://react-bootstrap.github.io). We can also view a list of all places, sorted by browsing history on the map. Weather at specific jumpoints is updated every 30 minutes, due to limited access to weather API.
