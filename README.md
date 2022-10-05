@@ -12,7 +12,7 @@ A very simple SPA application for showing places for diving. These places are us
 
 - [Weather API](https://openweathermap.org/api) to get information about weather at locations of JumPoint
 - [Leaflet API](https://leafletjs.com/) to show the JumPoints on the map. I used [reactJS library](https://react-leaflet.js.org/)
-- Custom API with [PostgreSQL](https://www.postgresql.org/) to add a new JumPoint
+- Custom API with [PostgreSQL](https://www.postgresql.org/) to add/update and delete a JumPoint
 
 ## Used Technologies
 
@@ -22,7 +22,8 @@ A very simple SPA application for showing places for diving. These places are us
 
 ## Links
 
-[Development Tracking](https://github.com/dreamwaffer/via-project/wiki/Development-Tracking)  
+[Frontend Branch](https://github.com/dreamwaffer/via-project/tree/main)  
+[Backend Branch](https://github.com/dreamwaffer/via-project/tree/backend)  
 [Running App](https://dreamwaffer.github.io/via-project/)  
 [Backend Documentation](https://jumpoints.herokuapp.com/swagger-ui/index.html)  
 
